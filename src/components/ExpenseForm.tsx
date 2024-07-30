@@ -25,7 +25,7 @@ const ExpenseForm = () => {
   const isEditing = useMemo(() => !!state.editingId, [state.editingId]);
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     const isAmountField = ["amount"].includes(name);
@@ -75,7 +75,7 @@ const ExpenseForm = () => {
   useEffect(() => {
     if (state.editingId) {
       const editingExpense = state.expenses.find(
-        (currentExpense) => currentExpense.id === state.editingId
+        (currentExpense) => currentExpense.id === state.editingId,
       );
       setExpense(editingExpense!);
       setPreviousAmount(editingExpense!.amount);

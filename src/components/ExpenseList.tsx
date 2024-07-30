@@ -7,7 +7,7 @@ const ExpenseList = () => {
 
   const filteredExpenses = state.currentFilterCategory
     ? state.expenses.filter(
-        (expense) => expense.category === state.currentFilterCategory
+        (expense) => expense.category === state.currentFilterCategory,
       )
     : state.expenses;
 

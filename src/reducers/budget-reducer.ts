@@ -47,7 +47,7 @@ const createExpense = (draftExpense: DraftExpense): Expense => {
 
 export const budgetReducer = (
   state: BudgetState = initialState,
-  action: BudgetActions
+  action: BudgetActions,
 ) => {
   if (action.type === "add-budget") {
     return {
@@ -84,7 +84,7 @@ export const budgetReducer = (
     return {
       ...state,
       expenses: state.expenses.filter(
-        (expense) => expense.id !== action.payload.id
+        (expense) => expense.id !== action.payload.id,
       ),
     };
   }
@@ -103,7 +103,7 @@ export const budgetReducer = (
       expenses: state.expenses.map((expense) =>
         expense.id === action.payload.expense.id
           ? action.payload.expense
-          : expense
+          : expense,
       ),
       modal: false,
       editingId: "",

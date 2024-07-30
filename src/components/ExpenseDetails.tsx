@@ -22,7 +22,7 @@ const ExpenseDetails = ({ expense }: ExpenseDetailsProps) => {
 
   const categoryInfo = useMemo(
     () => categories.filter((cat) => cat.id === expense.category)[0],
-    [expense]
+    [expense],
   );
 
   const editExpense = (id: Expense["id"]) => {
