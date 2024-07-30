@@ -7,7 +7,7 @@ import ExpenseList from "./components/ExpenseList";
 import FilterByCategory from "./components/FilterByCategory";
 
 const App = () => {
-  const { state, dispatch } = useBudget();
+  const { state } = useBudget();
 
   const isValidBudget = useMemo(() => state.budget > 0, [state.budget]);
 
